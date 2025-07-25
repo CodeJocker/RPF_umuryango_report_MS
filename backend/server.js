@@ -12,6 +12,8 @@ dotenv.config();
 const PORT = process.env.PORT|| 3000
 const app = express()
 
+// middlewares
+app.use(express.json())
 
 // cors headers
 app.use(cors({
@@ -27,9 +29,6 @@ app.options(
     credentials: true,
   })
 );
-
-// middlewares
-app.use(express.json())
 
 
 app.get("/", (req, res) => {
