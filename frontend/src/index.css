@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Primary color class */
+.color-primary {
+    background-color : rgb(12, 12, 107) ;
+}
