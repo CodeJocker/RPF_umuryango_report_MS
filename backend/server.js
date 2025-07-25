@@ -22,14 +22,6 @@ app.use(cors({
   credentials: true,
 }))
 
-app.options(
-  "*",
-  cors({
-    origin: process.env.CLIENT_URL,
-    credentials: true,
-  })
-);
-
 
 app.get("/", (req, res) => {
   res.json({ success: true, message: "Backend reachable!" });
