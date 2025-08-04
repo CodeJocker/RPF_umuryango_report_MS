@@ -36,6 +36,6 @@ app.use("/api/category/v1/", categoryRouter);
 app.use("/api/member/v1/", memberRouter);
 app.use("/api/payment/report/v1/", paymentReportRouter);
 
-app.listen(PORT, "0.0.0.0", () => {
+app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
