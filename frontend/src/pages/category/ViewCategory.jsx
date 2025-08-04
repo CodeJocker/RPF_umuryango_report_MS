@@ -38,13 +38,13 @@ const CategoryCard = React.memo(
     <div className="w-auto bg-gradient-to-br from-white/90 to-blue-50 dark:from-gray-900 dark:to-gray-800 shadow-xl rounded-2xl p-6 flex flex-col gap-4 border border-blue-100 dark:border-gray-700 hover:shadow-2xl hover:scale-[1.025] transition-all duration-200 group">
       {/* Icon */}
       <div className="w-full flex items-center gap-4">
-        <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white text-3xl font-extrabold uppercase shadow-lg group-hover:scale-110 transition-transform duration-200">
+        <div className="flex-shrink-0 w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white text-3xl font-extrabold uppercase shadow-lg group-hover:scale-110 transition-transform duration-200">
           {category.categoryName?.[0] || "?"}
         </div>
         <div className="flex-1">
           <div className="all-div flex items-center justify-between">
             <div className="name-div">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-1 line-clamp-1">
+              <h2 className="text-2xl font-bold text-slate-200 dark:text-slate-200  mb-1 line-clamp-1">
                 {category.categoryName}
               </h2>
             </div>

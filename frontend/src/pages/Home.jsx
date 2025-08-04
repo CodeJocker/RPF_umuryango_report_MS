@@ -27,12 +27,12 @@ const Home = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="w-full min-h-screen bg-slate-800 to-slate-900">
       {/* Hero Section */}
       <div className="px-6 py-6 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Welcome to RPF Report
+            Welcome to RPF Inkotanyi Kadobogo Village
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
             Rapport y'umusanzu w'umuryango RPF inkotanyi umudugudu wa kadobogo
