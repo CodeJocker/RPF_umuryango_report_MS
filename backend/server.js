@@ -12,15 +12,16 @@ dotenv.config();
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+console.log("CLIENT_URL:", process.env.CLIENT_URL); // Debug log
+
 connectDB();
 
 // middlewares
 app.use(express.json());
-
-// cors headers
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
+    origin:
+      process.env.CLIENT_URL || "https://rpf-umuryango-report-ms.vercel.app", // Fallback
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
