@@ -7,7 +7,7 @@ export const verifyToken = async (req, res, next) => {
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
-    const user = await UserModel.findOne({ _id: decoded.email });
+    const user = await UserModel.findOne({ email: decoded.email });
     if (!user) return res.status(401).json({ message: "Invalid user" });
 
     req.user = user;
