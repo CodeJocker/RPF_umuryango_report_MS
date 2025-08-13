@@ -3,11 +3,11 @@ import axios from "axios";
 const token = localStorage.getItem("user"); // or whatever key stores your token
 
 export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: import.meta.env.VITE_API_URL || "https://umuryangorpf.vercel.app/api",
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
-    Authorization: `Bearer ${token}`
+    Authorization: `Bearer ${token}`,
   },
   withCredentials: true,
   timeout: 10000,
@@ -18,6 +18,7 @@ export const api = axios.create({
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("user");
+    console.log(token)
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
