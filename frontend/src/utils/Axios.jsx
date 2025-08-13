@@ -3,7 +3,7 @@
   const token = localStorage.getItem("user"); // or whatever key stores your token
 console.log(import.meta.env.VITE_API_URL);
   export const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || "https://umuryangorpf.vercel.app/api",
+    baseURL: import.meta.env.VITE_API_URL,
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
